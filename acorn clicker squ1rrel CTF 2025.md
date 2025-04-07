@@ -15,19 +15,7 @@ Looking at the provided code we see how clicking the acorn is handled:
 The server checks if the amount sent to the server is a number that is below 10, and then it will add the amount to our balance stored in mongo DB. This may seem like normal code 
 but there is a vulnerability present.
 
-Signed integer underflow is when a binary number can only represent the numbers in the range -(2^(n-1)-1) to (2^(n-1)-1), and when a program encounters a number beyond this range,
-it will wrap around.
+This website uses Mongo DB, a NoSQL data base that uses BSON to store and transmit data. BSON is a binary encoded serialization of JSON. (For those who dont know, JSON is basically a format for storing/transmitting data that is easy to read, exchange, and parse.) When we say serialize we mean to take an object and format it so that it can be easily transmitted. When we say deserialize we mean reformatting the transmitted data back into its original object. 
 
-Here is an an example:
-
-Lets say we have a limit of 4 binary digits, the range of numbers that can be covered are 2^(4-1)-1, so from -7 to 7. What happens if we take -6 (1010) and add -3 (1101), 
-we get -9 (10111) since we can only store 4 digits the 1 is ignored and we get 0111, which evaluates to 7. 
-
-The website only checks that we dont go bove 10 acorns, but it doesnt stop us from sending very large negative numbers, so if I keep sending large negative numbers
-I will eventually loop back to a very big number and be able to buy the flag squirrel.
-
-Will finish writeup in a bit
-
-
-
+Sometimes there can be inconsistencies between serialized and unserialized data, and this can cause vulnerabilities. More specifically, 
 
