@@ -1,0 +1,1 @@
+This challenge was part of the archived challenges of imaginary CTF. Imaginary CTF often hosts daily ctf challenges and it is a great way to practice CTF. Even though this challenge was archived, I still decided to complete it and do a writeup on it.
