@@ -7,7 +7,7 @@ Because this is an archived challenge, we won't be able to connect, so I will ju
 
 Looking at the code, there is a flag variable that contains the flag and an eval function that takes in input from us that is up to 8 characters max ([:8] means that out input will be an array that holds 8 values from index 0-7, the rest of the input is ignored, if you are curious about this look up slicing in python)
 
-The function eval() will evaluate anything that is input into it, this is very dangerous because an attacker can input something malicious that gets evaluated and executed an this can have a range of consequences. It is strongly reccomended to avoid using eval() with user input because of how detrimental it can be. 
+The function eval() will evaluate anything that is input into it, this is very dangerous because an attacker can input something malicious that gets evaluated and executed and this can have a range of consequences. It is strongly reccomended to avoid using eval() with user input because of how detrimental it can be. 
 
 Because of how eval() can be exploited, there is a category of CTF called "jails". These challenges intentionally use eval(), but hinder how you can interact with it, which makes it up to you to find how to bypass the obstacles/ break free from the limitations in order to make the eval() function do what you want. In this case, we are limited to an 8 character input, and we want to try to read the flag.
 
