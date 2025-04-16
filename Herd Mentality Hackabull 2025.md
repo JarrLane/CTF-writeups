@@ -19,7 +19,7 @@ You might be wondering, whats stopping me from changing these values? This is wh
 the intended information that is supposed to be associated with a user. If an attacker tried to send a modified JWT, the cookie will change but the hash wont match the cookie because
 the attacker doesnt know the key, so ther server will know that sinec the modified message generated a different signature than what is expected when using the key, something is wrong
 so the request is cancelled. In this challenge, we know the key, so now if we try modifying the JWT, we can generate a signature with the proper key, and when ther server checks the JWT 
-with a hash algorithm, it will be valid which will continue the request.
+with a hash algorithm, it will be valid which will continue the request. It is worth notong that there are different algorithms that are used to sign JWT tokens, for our case it is HS256 which uses the same key to sign and verify.
 
 Now with that explained its time to apply it to this website, we know the key already so now lets try changing the jwt. 
 
