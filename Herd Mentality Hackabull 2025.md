@@ -33,6 +33,21 @@ We see the key is NightCity. Originally I was confused because I only decoded it
 
 Here we can see the decoded JWT, we can see the admin is set to false, we want that to be true. (Note the 3rd part is the signature thats why it looks so weird.)
 
+By using the JWT sign tool, we input the header, key, and body, and it will give us a new token
+![image](https://github.com/user-attachments/assets/bbca09c9-bd7d-444e-baf6-c0ca17f2726d)
+
+Now in the cookie section, I will replace with the new signed token and try to access an admin area.
+![image](https://github.com/user-attachments/assets/c61a8c54-b4ff-4c30-9d49-5820e2c8c1b1)
+
+There is the flag.
+
+Thank you for reading my writeup I hope it was helpful. 
+
+
+
+
+
+
 
 
 
