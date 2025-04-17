@@ -30,7 +30,9 @@ The second way is to use chat GPT. In general I have mixed feelings about using 
 
 In my case I use both. I can get by when it comes to reading C, but I like to use chat GPT to check to make sure Im on the right track.
 
-Since I want this writeup to be beginner friendly, I am going to walk you through the code.
+Since I want this writeup to be beginner friendly, I am going to walk you through the code. 
+
+Note: this writeup is not complete I will get back to it
 
 
 
