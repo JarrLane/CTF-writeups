@@ -15,9 +15,10 @@ things such as little/ big endian and more. When I check, I see its an ELF (exec
 
  ![image](https://github.com/user-attachments/assets/2731fe5d-808f-4144-8b07-bafed488ca3a)
 
-We do see that there is encryption involved so lets check the main function.
+We do see that there is encryption involved so lets check the main function. In the settings I will have it use Pseudo C, which is reconstructed C code from the binary that the decompiler generates. 
 
-![image](https://github.com/user-attachments/assets/ba2d129e-0e47-48fc-8b5c-4f4c906a9aee)
+![image](https://github.com/user-attachments/assets/a5005edc-2f1d-4216-b28f-d4075e148cb3)
+
 
 This may all seem confusing at first, but there are two ways that we can use to understand better. 
 
