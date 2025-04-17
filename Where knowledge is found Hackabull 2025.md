@@ -15,10 +15,22 @@ things such as little/ big endian and more. When I check, I see its an ELF (exec
 
  ![image](https://github.com/user-attachments/assets/2731fe5d-808f-4144-8b07-bafed488ca3a)
 
-We do see that there is encryption involved so lets check the main function. In the settings I will have it use Pseudo C, which is reconstructed C code from the binary that the decompiler generates. 
+We do see that there is encryption involved so lets check the main function. In the settings I will have it use Pseudo C, which is reconstructed C code from the binary that the decompiler generates. (Using pseudo C is much easier than trying to read assembly or machine code, especially if you have C experience)
 
 ![image](https://github.com/user-attachments/assets/a5005edc-2f1d-4216-b28f-d4075e148cb3)
+![image](https://github.com/user-attachments/assets/cfb9ad5f-26f3-4e97-999a-44a3cd129606)
 
 
-This may all seem confusing at first, but there are two ways that we can use to understand better. 
+This may all seem confusing at first, but there are two ways that we can use to understand better.  
+
+The first way is having a good understanding of C, assembly, IL, etc. If you are already familiar with these languages you can probably piece together what the code is doing. There is also a feature in binary ninja that lets you rename variables from the names 
+given by pseudo C for better readability. 
+
+The second way is to use chat GPT. In general I have mixed feelings about using AI in CTF challenges, but I think its valid to use it to try to understand code, especially if you are not familiar with C or coding in general. If you give chat GPT the pseudo C it can run you through how it works so you get a better idea. If you use chat GPT make sure you learn from using it.
+
+In my case I use both. I can get by when it comes to reading C, but I like to use chat GPT to check to make sure Im on the right track.
+
+Since I want this writeup to be beginner friendly, I am going to walk you through the code.
+
+
 
