@@ -11,7 +11,7 @@ needs to be broken. The first thing to do is look at the type of file being deal
 things such as little/ big endian and more. When I check, I see its an ELF (executable linux file) 64-bit LSB shared object
  x86-64.
 
- Now to reverse engineer, I will use binary ninja to examine the binary. In reverse challenges, it is common practice to check the strings present in the binary, in some cases the flag will be there bit not in this case.
+ Now to reverse engineer, I will use binary ninja to examine the binary. In reverse challenges, it is common practice to check the strings present in the binary, in some cases the flag will be there but not in this case.
 
  ![image](https://github.com/user-attachments/assets/2731fe5d-808f-4144-8b07-bafed488ca3a)
 
@@ -30,7 +30,10 @@ The second way is to use chat GPT. In general I have mixed feelings about using 
 
 In my case I use both. I can get by when it comes to reading C, but I like to use chat GPT to check to make sure Im on the right track.
 
-Since I want this writeup to be beginner friendly, I am going to walk you through the code. 
+Since I want this writeup to be beginner friendly, I am going to walk you through the main function.
+
+The first thing that happes is that it checks argc (the number of arguments passed in the command line) is above 1, this basically tells the code that we didn't pass any arguments when we ran the binary from the terminal so it will tell you to pass the flag.
+Next it creates a variable called void var_6d, and then copies [ UNATCO. Nano-augs key encryption v0.1 ] into var_6d, specifying a holding size of 42 (0x2a hex -> decimal). 
 
 Note: this writeup is not complete I will get back to it
 
