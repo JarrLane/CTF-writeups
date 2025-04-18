@@ -27,7 +27,7 @@ It looks like the key is base 64 encoded, so lets decode it.
 
 ![image](https://github.com/user-attachments/assets/4ef7b6db-5473-469a-add9-cc6e5530dd68)
 
-We see the key is NightCity. Originally I was confused because I only decoded it once, but when i used the magic wand it automatically decoded it 3 times, use the magic wand tool if in doubt because there is a chance it can find the proper way to decode.
+We see the key is NightCity. Originally I was confused because I only decoded it once, but when i used the magic wand it automatically decoded it 3 times, use the magic wand tool if in doubt because there is a chance it can find the proper way to decode. The magic wand tool in cyber chef is when cyberchef tries to automatically determine which encoding is used, sometimes it helps sometimes it is wrong. In this case it definitely helped.
 
 ![image](https://github.com/user-attachments/assets/50662577-cd9f-4aa6-b06c-9ae7d7ecf151)
 
