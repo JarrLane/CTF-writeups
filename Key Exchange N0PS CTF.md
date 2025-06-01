@@ -184,8 +184,7 @@ we see in the hex.
 
 When you open up the flag you get this:
 
-I will wait until after the CTF ends to post the image
-
+![flag](https://github.com/user-attachments/assets/1b2bd4e7-183c-47ff-ba66-9094d033fc64)
 
 
 This was a very fun ctf and I am glad I was able to complete a category that I am not as familiar with. Thank you for reading my writeup I hope it helped.
