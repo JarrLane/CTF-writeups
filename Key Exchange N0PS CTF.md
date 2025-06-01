@@ -77,7 +77,7 @@ AES (Advanced Encryption Standard) is a block cipher that takes in blocks of pla
 You might be wondering, what is a mode of operation? Think about this, if we have a lot of plain text, we have a lot of blocks to encrypt, so how would we go about encrypting multiple blocks?
 Well, one way you may be thinking is "lets just use the AES algorithm and key we generated on each blocks". This is a simple way to do it, although it is not the most secure because if the secret
 key is found, all of the ciphertext is decrypted, and since each block was encrypted independently, patterns start to emerge because identical blocks will be encrypted in the same way. This is where modes 
-of operation come in, its a way of encrypting multiple blocks in a way that doesn't just rely on the key and easily give patterns in the ciphertext. CBC is a way to do this, How does this work? Here is a quick visual I made in  blender: 
+of operation come in, its a way of encrypting multiple blocks in a way that doesn't just rely on AES and reveal patterns in the ciphertext. CBC is a way to do this, How does this work? Here is a quick visual I made in  blender: 
 
 ![image](https://github.com/user-attachments/assets/aabeeb7f-d5f9-4993-8b5d-bc09ac8bd8b0)
 
