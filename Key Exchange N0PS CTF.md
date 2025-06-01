@@ -1,5 +1,5 @@
-This  a cryptography challenge that was part of N0PS ctf 2025. Usually I don't do many crypto challenges, although since I was already familiar with Diffie Hellman and AES, I decided to try it out aand I am glad
-that I did, this was a good experience for levelling up my skills in other challenge categories.
+This  a cryptography challenge that was part of N0PS ctf 2025. Usually I don't do many crypto challenges, although since I was already familiar with Diffie Hellman and AES, I decided to try it out and I am glad
+that I did, this was a good experience for leveling up my skills in other challenge categories.
 
 ![image](https://github.com/user-attachments/assets/4368f70f-91c8-4f06-b9d0-19d0e6662ea2)
 
