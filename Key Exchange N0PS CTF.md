@@ -84,7 +84,8 @@ does this work? Here is a quick visual I made in  blender:
 Notice how instead of directly passing the plaintext into AES, we XOR it with something called an IV, and then on the next block we XOR the plaintext with the previous ciphertext result. The IV 
 (Initialization Vector) is basically a random number of a fixed size that we use to XOR our first plaintext block. Why use an IV? If we want to begin CBC, how can we start it if we don't have
 a previous cipher block? This is why we use the IV, then for subsequent encryption the previous ciphertext get used. Notice how now, you cant't decrypt the ciphertext without knowing the IV and
-the key. Also since the previous cipher text is used with the next block, all of the blocks are dependent on each other.
+the key. Also since the previous cipher text is used with the next block, all of the blocks are dependent on each other, this means that if there are any same plaintext blocks, they will look 
+different in the ciphertext because they were encrypted with the previous blocks.
 
 I hope I was able to summarize this well, now back to the ctf.
 
