@@ -3,7 +3,7 @@ that I did, this was a good experience for leveling up my skills in other challe
 
 ![image](https://github.com/user-attachments/assets/4368f70f-91c8-4f06-b9d0-19d0e6662ea2)
 
-To begin lets look at the given python code, and I wil explain what it does.
+To begin lets look at the given python code, and I will explain what it does.
 ```
 from Crypto.Util import number
 from random import randint
