@@ -53,16 +53,16 @@ if __name__ == '__main__':
 
 This is what the code is doing: 
 
--Imports libraries that allows for cryptographic operations, random numbers, and interactiong with the system
-*Defines a size
-+Generates the public numbers p and g that will be used in further calculations with gen_pub_key(size)
--Generates a random private key between 2 and p-1
--Calculates a public key
--Write the p, g, and public key values to a buffer
--Flushes the buffer, sending out the p, g, and public key value to us
--Receives our public key
--Calculates the shared key with its private key and our public key
--Runs a function called get_encrypted_flag() that takes in the shared key, takes a hash of it, uses that hash to set up an AES CBC encryption operation, pads the data, uses AES CBC on the flag file 
+- Imports libraries that allows for cryptographic operations, random numbers, and interactiong with the system
+- Defines a size
+- Generates the public numbers p and g that will be used in further calculations with gen_pub_key(size)
+- Generates a random private key between 2 and p-1
+- Calculates a public key
+- Write the p, g, and public key values to a buffer
+- Flushes the buffer, sending out the p, g, and public key value to us
+- Receives our public key
+- Calculates the shared key with its private key and our public key
+- Runs a function called get_encrypted_flag() that takes in the shared key, takes a hash of it, uses that hash to set up an AES CBC encryption operation, pads the data, uses AES CBC on the flag file 
 and appends the IV used in front, and returns that value, that value is then sent to us, so we receive the IV and the encrypted flag
 
 For those who are not aware of Diffie Hellman or AES CBC, 
@@ -152,21 +152,21 @@ except ValueError as e:
 ```
 Here is what my code is doing: 
 
--Importing libraries that allow me to connect to the server and perform cryptographic operations (Also some advice, use the pycryptodome library not the crypto one, you will thank me later)
--Defining a size
--Connecting to the challenge server 
--Receive the data from the server (the shared values p g and public key)
--Calculate my own private key
--Use the public values and my private key to generate my own public key to send back to the server
--Send my public key to the server so the server can calculate our shared key
--Use the values I have to calculate the shared key for myself (At this point both me and the server will be using the same key)
--Do a SHA 256 hash on the shared key (Since that is what the server uses as the AES key to encrypt the file)
--Receive the response from the server which gives us the IV it used and the ciphertext that was generated
--Split the response into the IV and ciphertext so we can use it for decryption
--Set up the decryption with the key and IV that we now have
--Decrypt the ciphertext and pad it 
--Create a png file and put in the decrypted data (Why a png file? I will explain)
--(If there was an error with the decryption then the except statement gracefully tellsme)
+- Importing libraries that allow me to connect to the server and perform cryptographic operations (Also some advice, use the pycryptodome library not the crypto one, you will thank me later)
+- Defining a size
+- Connecting to the challenge server 
+- Receive the data from the server (the shared values p g and public key)
+- Calculate my own private key
+- Use the public values and my private key to generate my own public key to send back to the server
+- Send my public key to the server so the server can calculate our shared key
+- Use the values I have to calculate the shared key for myself (At this point both me and the server will be using the same key)
+- Do a SHA 256 hash on the shared key (Since that is what the server uses as the AES key to encrypt the file)
+- Receive the response from the server which gives us the IV it used and the ciphertext that was generated
+- Split the response into the IV and ciphertext so we can use it for decryption
+- Set up the decryption with the key and IV that we now have
+- Decrypt the ciphertext and pad it 
+- Create a png file and put in the decrypted data (Why a png file? I will explain)
+- (If there was an error with the decryption then the except statement gracefully tells me)
 
 So this script decrypts an image the server sent me, but how do I know that this is an image? A few ways.
 
