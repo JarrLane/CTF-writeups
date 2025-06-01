@@ -54,8 +54,8 @@ if __name__ == '__main__':
 This is what the code is doing: 
 
 -Imports libraries that allows for cryptographic operations, random numbers, and interactiong with the system
--Defines a size
--Generates the public numbers p and g that will be used in further calculations with gen_pub_key(size)
+*Defines a size
++Generates the public numbers p and g that will be used in further calculations with gen_pub_key(size)
 -Generates a random private key between 2 and p-1
 -Calculates a public key
 -Write the p, g, and public key values to a buffer
