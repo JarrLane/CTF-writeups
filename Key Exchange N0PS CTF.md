@@ -76,16 +76,16 @@ I reccomend this video, this guy explains it very well, he's the one that helped
 AES (Advanced Encryption Standard) is a block cipher that takes in blocks of plaintext and encrypts them. CBC (Cipher Block Chaining) is a mode of operation used with block ciphers like AES.
 You might be wondering, what is a mode of operation? Think about this, if we have a lot of plain text, we have a lot of blocks to encrypt, so how would we go about encrypting multiple blocks?
 Well, one way you may be thinking is "lets just use the AES algorithm and key we generated on each blocks". This is a simple way to do it, although it is not the most secure because if the secret
-key is found, all of the ciphertext is decrypted. This is where modes of operation come in, its a way of encrypting multiple blocks in a way that doesn't just rely on the key. CBC is a way to do this, How
-does this work? Here is a quick visual I made in  blender: 
+key is found, all of the ciphertext is decrypted, and since each block was encrypted independently, patterns start to emerge because identical blocks will be encrypted in the same way. This is where modes 
+of operation come in, its a way of encrypting multiple blocks in a way that doesn't just rely on the key and easily give patterns in the ciphertext. CBC is a way to do this, How does this work? Here is a quick visual I made in  blender: 
 
 ![image](https://github.com/user-attachments/assets/aabeeb7f-d5f9-4993-8b5d-bc09ac8bd8b0)
 
 Notice how instead of directly passing the plaintext into AES, we XOR it with something called an IV, and then on the next block we XOR the plaintext with the previous ciphertext result. The IV 
 (Initialization Vector) is basically a random number of a fixed size that we use to XOR our first plaintext block. Why use an IV? If we want to begin CBC, how can we start it if we don't have
-a previous cipher block? This is why we use the IV, then for subsequent encryption the previous ciphertext get used. Notice how now, you cant't decrypt the ciphertext without knowing the IV and
+a previous cipher block? This is why we use the IV, then for subsequent encryption the previous ciphertext gets used. Notice how now, you cant't decrypt the ciphertext without the IV and
 the key. Also since the previous cipher text is used with the next block, all of the blocks are dependent on each other, this means that if there are any same plaintext blocks, they will look 
-different in the ciphertext because they were encrypted with the previous blocks.
+different in the ciphertext because they were encrypted with the previous blocks, not just AES.
 
 I hope I was able to summarize this well, now back to the ctf.
 
