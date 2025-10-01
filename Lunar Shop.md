@@ -51,7 +51,7 @@ lets see if that works with flag.
 
 (At this point I assumed the flag table was called "flag")
 
-When processed, my query will look like: ```SELECT * FROM products WHERE product_id = 12 UNION SELECT * FROM flag``` This quert is basically telling the server to return all rows where product ID = 11, and all rows from the flag.
+When processed, my query will look like: ```SELECT * FROM products WHERE product_id = 12 UNION SELECT * FROM flag``` This quert is basically telling the server to return all rows where product ID = 12, and all rows from the flag.
 
 <img width="1358" height="246" alt="image" src="https://github.com/user-attachments/assets/a114784d-bdd1-40c8-9270-4493f9a8db11" />
 
