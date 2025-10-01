@@ -46,8 +46,30 @@ We also know that we have to add on to the current query.
 
 What can we do?
 
-In SQLite, one way to have content from multiple tables show up in a single query result is to use ```UNION```. Union takes rows from multiple tables and returns them, so 
+In SQLite, one way to have content from multiple tables show up in a single query result is to use ```UNION```. Union takes rows from multiple tables and returns them together, so 
 lets see if that works with flag.
+
+(At this point I assumed the flag table was called "flag")
+
+When processed, my query will look like: ```SELECT * FROM products WHERE product_id = 12 UNION SELECT * FROM flag``` This quert is basically telling the server to return all rows where product ID = 11, and all rows from the flag.
+
+<img width="1358" height="246" alt="image" src="https://github.com/user-attachments/assets/a114784d-bdd1-40c8-9270-4493f9a8db11" />
+
+We see two things: there is a flag table, and that the amount of columns in the two tables do not match, so the UNION statement fails.
+
+The UNION statement requires the two tables that are queried to have the same number of columns. but the flag table doesnt have four columns, so what do we do?
+
+https://portswigger.net/web-security/sql-injection/union-attacks
+
+^From reading this we see we can use NULL values to compensate for missing columns.
+
+In this case lets try ```SELECT * FROM products WHERE product_id = 12 UNION SELECT flag, NULL, NULL, NULL from flag``` (Assuming they named the column flag)
+
+<img width="1365" height="245" alt="image" src="https://github.com/user-attachments/assets/6c667e85-1286-43e6-ac3f-b72de344a8b8" /> 
+
+Now We get the flag
+
+Thank you for reading my writeup.
 
 
 
