@@ -61,7 +61,7 @@ The UNION statement requires the two tables that are queried to have the same nu
 
 https://portswigger.net/web-security/sql-injection/union-attacks
 
-^From reading this we see we can use NULL values to compensate for missing columns.
+^From reading this we see we can use NULL values to compensate for missing/unknown columns.
 
 In this case lets try ```SELECT * FROM products WHERE product_id = 12 UNION SELECT flag, NULL, NULL, NULL from flag``` (Assuming they named the column flag)
 
