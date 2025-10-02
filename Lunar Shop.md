@@ -69,6 +69,8 @@ In this case lets try ```SELECT * FROM products WHERE product_id = 12 UNION SELE
 
 Now We get the flag
 
+Note, you will notice that in my payload I put an ID of 12, which is not a valid product id. I did this because from what I understand, if the first select statement doesn't work it returns the second, which is the flag.
+
 Thank you for reading my writeup.
 
 
