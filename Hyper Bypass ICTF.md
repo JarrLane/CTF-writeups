@@ -18,6 +18,16 @@ We don't want to actually click 10000000000 times so lets break the website inst
 
 We know that the code checks a cookie that gets sent, lets look at a request through burpsuite: 
 
+<img width="1573" height="884" alt="image" src="https://github.com/user-attachments/assets/319ac681-607a-499a-822e-0c337aeccda0" />
 
+If you look closely, you will notice that our click cookie is sent, lets try editing it to a big number: 
 
+<img width="1575" height="879" alt="image" src="https://github.com/user-attachments/assets/d745d0e9-17aa-4433-a887-8fb5d7afafbd" />
 
+Lets see our result: 
+
+<img width="847" height="263" alt="image" src="https://github.com/user-attachments/assets/5437d460-a0e1-4c4c-897e-a6b64f83758d" />
+
+We get the flag!!! 
+
+THank you for reading.
