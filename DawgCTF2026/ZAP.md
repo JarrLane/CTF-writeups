@@ -15,3 +15,10 @@ They have a website too: https://www.nia.org/
 
 This is a group focused on studying, collecting, and classifying electrical insulators, thats pretty cool, but what is an ST number?
 
+Googling more tells me ST means suspention type, which is a way of classifying suspension insulators by certain characteristics.
+
+https://www.nia.org/general/suspensions/#:~:text=Suspension%20Insulators,the%20following%20ranges%20by%20type:
+
+Knowing this lets take a closer look at the given pictures. If we look closely we see engravings that say "1800","20000","Locke",and "GE USA". Lets look into these more. 
+
+
